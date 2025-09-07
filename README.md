@@ -1,7 +1,7 @@
 # Spring-employees-csv
 Spring Boot application with Employee CRUD APIs, CSV export using Spring Batch, and CSV download feature.  Includes Swagger UI for API documentation and H2 in-memory database for easy setup.
 
-# 📊 Spring Boot Employees CSV Export
+# Spring Boot Employees CSV Export
 
 A simple Spring Boot application that demonstrates:
 
@@ -13,7 +13,7 @@ A simple Spring Boot application that demonstrates:
 
 ---
 
-## 🚀 Features
+##  Features
 - **Employees CRUD APIs** (`GET`, `POST`, `PUT`, `DELETE`)
 - **CSV Export** via Spring Batch
 - **CSV Download** via REST
@@ -22,7 +22,7 @@ A simple Spring Boot application that demonstrates:
 
 ---
 
-## ⚙️ Tech Stack
+## Technologies Used:
 - Java 17+
 - Spring Boot
 - Spring Data JPA
@@ -32,7 +32,7 @@ A simple Spring Boot application that demonstrates:
 
 ---
 
-## 📂 API Endpoints
+##  API Endpoints
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
@@ -46,15 +46,32 @@ A simple Spring Boot application that demonstrates:
 
 ---
 
-## ▶️ How to Run
-```bash
-# clone repository
-git clone https://github.com/<your-username>/spring-employees-csv.git
-cd spring-employees-csv
+##  How to Run
 
-# build
-mvn clean install
+Swagger → http://localhost:8080/swagger-ui.html
 
-# run
-mvn spring-boot:run
+H2 Console → http://localhost:8080/h2-console
+ (JDBC: jdbc:h2:mem:empdb)
+
+---
+
+**Sample Data**
+
+Preloaded via src/main/resources/data.sql:
+
+INSERT INTO employee (id, name, email, department) VALUES
+(1, 'Alice', 'alice@example.com', 'Engineering'),
+(2, 'Bob', 'bob@example.com', 'HR'),
+(3, 'Charlie', 'charlie@example.com', 'Finance');
+
+---
+
+**CSV Export Example**
+
+After triggering /api/employees/export, you get employees.csv:
+
+ID,Name,Email,Department
+1,Alice,alice@example.com,Engineering
+2,Bob,bob@example.com,HR
+3,Charlie,charlie@example.com,Finance
 
