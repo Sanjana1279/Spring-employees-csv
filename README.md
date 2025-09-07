@@ -58,12 +58,12 @@ H2 Console → http://localhost:8080/h2-console
 **Sample Data**
 
 Preloaded via src/main/resources/data.sql:
-
+```sql
 INSERT INTO employee (id, name, email, department) VALUES
 (1, 'Alice', 'alice@example.com', 'Engineering'),
 (2, 'Bob', 'bob@example.com', 'HR'),
 (3, 'Charlie', 'charlie@example.com', 'Finance');
-
+```
 ---
 
 **CSV Export Example**
