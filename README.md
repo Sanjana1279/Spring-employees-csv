@@ -70,8 +70,9 @@ INSERT INTO employee (id, name, email, department) VALUES
 
 After triggering /api/employees/export, you get employees.csv:
 
+```sql
 ID,Name,Email,Department
 1,Alice,alice@example.com,Engineering
 2,Bob,bob@example.com,HR
 3,Charlie,charlie@example.com,Finance
-
+```
